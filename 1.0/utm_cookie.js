@@ -30,7 +30,7 @@ var utmCookie = {
       var expires = "; expires="+date.toGMTString();
     }
     else var expires = "";
-    document.cookie = this.cookieNamePrefix + name+"="+value+expires+"; path=/";
+    document.cookie = this.cookieNamePrefix + name+"="+value+expires+"; path=/;domain=" + "." + window.location.hostname;
   },
 
   readCookie: function(name) {
